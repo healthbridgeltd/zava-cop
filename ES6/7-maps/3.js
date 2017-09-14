@@ -15,4 +15,3 @@ let vegMap = new Map();
 fruitsMap.set(vegMap, vegObj);
 
 console.log(fruitsMap.get(vegMap));
-
