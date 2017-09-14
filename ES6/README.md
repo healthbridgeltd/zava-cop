@@ -2,7 +2,7 @@
 
 ## The What?
 
-We cover some interesting topic on this COP:
+We cover some interesting topics on this COP:
 
 - `var` versus `let` and `const`.
 - Fat arrow vs `function`.
