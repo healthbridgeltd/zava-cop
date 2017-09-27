@@ -1,0 +1,44 @@
+version: "3"
+services:
+  red:
+    build:
+      context: .
+    ports:
+      - 80
+    environment: 
+      SERVICE_PORTS: 80  
+    networks: 
+      - gateway
+    labels:
+      - "traefik.backend=color"
+      - "traefik.frontend.rule=Host:color.docker.localhost"  
+  blue:
+    build:
+      context: .
+      args: 
+        COLOR: blue
+    ports:
+      - 80
+    environment: 
+      SERVICE_PORTS: 80  
+    networks: 
+      - gateway
+    labels:
+      - "traefik.backend=color"
+      - "traefik.frontend.rule=Host:color.docker.localhost"   
+
+  proxy:
+    image: traefik
+    command: --web --docker --docker.domain=docker.localhost --logLevel=DEBUG
+    networks:
+      - gateway
+    ports:
+      - "8888:80"
+      - "8080:8080"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /dev/null:/traefik.toml   
+
+networks:
+  gateway:
+    driver: bridge  
