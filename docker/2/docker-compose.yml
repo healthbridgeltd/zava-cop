@@ -4,9 +4,7 @@ services:
     build:
       context: .
     ports:
-      - 80
-    environment: 
-      SERVICE_PORTS: 80  
+      - 80  
     networks: 
       - gateway
     labels:
@@ -18,9 +16,7 @@ services:
       args: 
         COLOR: blue
     ports:
-      - 80
-    environment: 
-      SERVICE_PORTS: 80  
+      - 80 
     networks: 
       - gateway
     labels:
