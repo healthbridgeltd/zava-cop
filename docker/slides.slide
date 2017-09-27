@@ -1,0 +1,17 @@
+Intro to Docker
+
+Eike Dawid
+Health Brigde Ltd
+
+* What is Docker
+
+Docker a wrapper and packager of 3 Linux kernel features:
+
+- namespaces: isolation of what you can see (e.g. containers have their own PID 1)
+- cgroups: control and limiting of resource usage of processes (CPU, Mem)
+- chroot: its own root file system
+
+.image https://cdn.worldvectorlogo.com/logos/docker.svg _ 250
+
+_Further_ _Reading:_
+.link https://www.slideshare.net/jpetazzo/anatomy-of-a-container-namespaces-cgroups-some-filesystem-magic-linuxcon Presentation about containers in details
