@@ -1,17 +1,46 @@
 Intro to Docker
 
 Eike Dawid
-Health Brigde Ltd
+Health Bridge Ltd
 
-* What is Docker
+* What is Docker?
 
-Docker a wrapper and packager of 3 Linux kernel features:
+.image https://cdn.worldvectorlogo.com/logos/docker.svg _ 200
+
+Docker a wrapper and packager around 3 Linux kernel features:
 
 - namespaces: isolation of what you can see (e.g. containers have their own PID 1)
 - cgroups: control and limiting of resource usage of processes (CPU, Mem)
 - chroot: its own root file system
 
-.image https://cdn.worldvectorlogo.com/logos/docker.svg _ 250
-
 _Further_ _Reading:_
 .link https://www.slideshare.net/jpetazzo/anatomy-of-a-container-namespaces-cgroups-some-filesystem-magic-linuxcon Presentation about containers in details
+.link https://www.youtube.com/watch?v=HPuvDm8IC-4 Liz Rice - implement a containrt in Go
+
+* Components
+
+Docker consists of a demon which exposes a Rest API and the CLI.
+
+.image https://docs.docker.com/engine/article-img/engine-components-flow.png _ 300
+
+On Linux the demon runs directly on the host. Docker for Mac and Windows ships actually a tiny Linux VM that runs the demon, while the cli runs on the host 
+
+* Terminology
+
+*Image:*
+An `image` is the equivalent of the source of a container. It has a name. It can be tagged (e.g. with a version). It is stored in a `repository`, which can be public like https://hub.docker.com/ or private, e.g. using AWS ECR private repos usually require a login (`docker login`) before they can be used.
+
+*Container:*
+A `container` is an instance of an image. This also has a name, which is either auto-generated or defined by you. 
+
+*Networks:*
+Isolated networks can be defined that allow container to container communication
+
+*Volume:*
+This is similar to a mounted directory. You can share directories on the host with containers and mount them in various locations on the files system.
+
+* More than a thousand words ...
+
+
+
+.image https://www.docker.com/sites/default/files/Container%402x.png _ 400
