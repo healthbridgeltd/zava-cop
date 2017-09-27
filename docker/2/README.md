@@ -6,7 +6,7 @@ make sure that you add and entry to your `/etc/hosts` file for `docker.localhost
 ```
 
 1. clean up from before:
-
+```
    # check what's there
    docker ps -a 
 
@@ -15,6 +15,7 @@ make sure that you add and entry to your `/etc/hosts` file for `docker.localhost
 
    # check again!
    docker ps
+```
 
 2. Build Arguments
 
