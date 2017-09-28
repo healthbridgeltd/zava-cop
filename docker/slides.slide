@@ -15,7 +15,7 @@ Docker a wrapper and packager around 3 Linux kernel features:
 
 _Further_ _Reading:_
 .link https://www.slideshare.net/jpetazzo/anatomy-of-a-container-namespaces-cgroups-some-filesystem-magic-linuxcon Presentation about containers in details
-.link https://www.youtube.com/watch?v=HPuvDm8IC-4 Liz Rice - implement a containrt in Go
+.link https://www.youtube.com/watch?v=HPuvDm8IC-4 Liz Rice - implement a container in Go
 
 * Components
 
@@ -41,11 +41,11 @@ This is similar to a mounted directory. You can share directories on the host wi
 
 * Tips & Tricks
 
-Finding your docker for Mac IP address:
+1. Finding your docker for Mac IP address:
 
     ifconfig | grep 'inet 192'| awk '{ print $2}'
 
-Clean up after yourself:
+2. Clean up after yourself:
 
     docker container prune
     docker image prune
@@ -53,7 +53,7 @@ Clean up after yourself:
     # global nuke
     docker system prune   
 
-Careful when googling tips around docker-compose - a lot of the articles are for
+3. Careful when googling tips around docker-compose - a lot of the articles are for
 compose version 2, the current one is 3 (.3)
 
-Networking sucks even with docker     
+4. Networking sucks even with docker     
