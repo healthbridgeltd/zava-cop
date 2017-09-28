@@ -39,8 +39,21 @@ Isolated networks can be defined that allow container to container communication
 *Volume:*
 This is similar to a mounted directory. You can share directories on the host with containers and mount them in various locations on the files system.
 
-* More than a thousand words ...
+* Tips & Tricks
 
+Finding your docker for Mac IP address:
 
+    ifconfig | grep 'inet 192'| awk '{ print $2}'
 
-.image https://www.docker.com/sites/default/files/Container%402x.png _ 400
+Clean up after yourself:
+
+    docker container prune
+    docker image prune
+    docker network prune
+    # global nuke
+    docker system prune   
+
+Careful when googling tips around docker-compose - a lot of the articles are for
+compose version 2, the current one is 3 (.3)
+
+Networking sucks even with docker     
