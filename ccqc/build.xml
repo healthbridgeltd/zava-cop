@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="Test App" default="dev" basedir=".">
+    <property name="basedir" value="${project.basedir}"/>
+    <property name="vendorBinDir" value="${basedir}/vendor/bin"/>
+    <property name="source" value="${basedir}/src"/>
+    <property name="threads" value="4"/>
+    <target name="dev" depends="clean,lint,pdepend,phpmd,phpcpd,phploc,phpcs,phpunit,phpcb,phpmetrics"/>
+    <target name="clean" description="Clean up and create artifact directories">
+        <delete dir="${basedir}/public/build/doc"/>
+        <delete dir="${basedir}/public/build/pdepend"/>
+        <delete dir="${basedir}/public/build/code-browser"/>
+        <delete dir="${basedir}/public/build/coverage"/>
+        <delete dir="${basedir}/public/build/logs"/>
+        <mkdir dir="${basedir}/public/build/doc"/>
+        <mkdir dir="${basedir}/public/build/pdepend"/>
+        <mkdir dir="${basedir}/public/build/code-browser"/>
+        <mkdir dir="${basedir}/public/build/coverage"/>
+        <mkdir dir="${basedir}/public/build/logs"/>
+    </target>
+    <target name="lint" description="Perform syntax check of sourcecode files">
+        <apply executable="php" failonerror="true">
+            <arg value="-l"/>
+            <fileset dir="${source}">
+                <include name="**/*.php"/>
+            </fileset>
+        </apply>
+    </target>
+    <target name="pdepend" description="Calculate software metrics using PHP_Depend">
+        <exec executable="${vendorBinDir}/pdepend" logoutput="true">
+            <arg value="--jdepend-xml=${basedir}/public/build/logs/jdepend.xml"/>
+            <arg value="--jdepend-chart=${basedir}/public/build/pdepend/dependencies.svg"/>
+            <arg value="--overview-pyramid=${basedir}/public/build/pdepend/overview-pyramid.svg"/>
+            <arg path="${source}"/>
+        </exec>
+    </target>
+    <target name="phpmd" description="Perform project mess detection using PHPMD creating a log file">
+        <exec executable="${vendorBinDir}/phpmd" logoutput="true">
+            <arg path="${source}"/>
+            <arg value="xml"/>
+            <arg value="${basedir}/phpmd.xml"/>
+            <arg value="--reportfile"/>
+            <arg value="${basedir}/public/build/logs/pmd.xml"/>
+        </exec>
+    </target>
+    <target name="phpcpd" description="Find duplicate code using PHPCPD">
+        <exec executable="${vendorBinDir}/phpcpd" logoutput="true">
+            <arg value="--log-pmd"/>
+            <arg value="${basedir}/public/build/logs/pmd-cpd.xml"/>
+            <arg path="${source}"/>
+        </exec>
+    </target>
+    <target name="phploc" description="Measure project size using PHPLOC">
+        <exec executable="${vendorBinDir}/phploc" logoutput="true">
+            <arg value="--log-csv"/>
+            <arg value="${basedir}/public/build/logs/phploc.csv"/>
+            <arg path="${source}"/>
+        </exec>
+    </target>
+    <target name="phpcs"
+            description="Find coding standard violations using PHP_CodeSniffer creating a log file for the continuous integration server">
+        <exec executable="${vendorBinDir}/phpcs" logoutput="true">
+            <arg value="--report=checkstyle"/>
+            <arg value="--report-file=${basedir}/public/build/logs/checkstyle.xml"/>
+            <arg value="--standard=PSR2"/>
+            <arg value="--extensions=php"/>
+            <arg path="${source}"/>
+        </exec>
+    </target>
+    <target name="phpunit" description="Run unit tests using PHPUnit and generates junit.xml and clover.xml">
+        <exec logoutput="true" command="${vendorBinDir}/phpunit --configuration=phpunit.xml.dist"/>
+    </target>
+    <target name="phpcb" description="Aggregate tool output with PHP_CodeBrowser">
+        <exec executable="${vendorBinDir}/phpcb" logoutput="true">
+            <arg value="--log"/>
+            <arg path="${basedir}/public/build/logs"/>
+            <arg value="--source"/>
+            <arg path="${source}"/>
+            <arg value="--output"/>
+            <arg path="${basedir}/public/build/code-browser"/>
+        </exec>
+    </target>
+    <target name="phpmetrics" description="Phpmetrics PHP code analizer">
+        <exec command="${vendorBinDir}/phpmetrics ${source} --report-html=${basedir}/public/build/doc/phpmetrics" logoutput="true"/>
+    </target>
+</project>

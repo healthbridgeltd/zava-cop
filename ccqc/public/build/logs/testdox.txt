@@ -1,0 +1,46 @@
+App\Tests\Command\AddUserCommand
+ [ ] Create user non interactive 
+ [ ] Create user interactive 
+
+App\Tests\Controller\Admin\BlogController
+ [ ] Access denied for regular users 
+ [ ] Admin backend home page
+ [ ] Admin new post
+ [ ] Admin show post
+ [ ] Admin edit post
+ [ ] Admin delete post
+
+App\Tests\Controller\BlogController
+ [ ] Index
+ [ ] Rss
+ [ ] New comment
+
+App\Tests\Controller\DefaultController
+ [ ] Public urls 
+ [ ] Public blog post
+ [ ] Secure urls 
+
+App\Tests\Form\DataTransformer\TagArrayToStringTransformer
+ [x] Create the right amount of tags
+ [x] Create the right amount of tags with too many commas
+ [x] Trim names
+ [x] Duplicate names
+ [x] Uses already defined tags
+ [x] Transform
+
+App\Tests\Utils\Slugger
+ [x] Slugify 
+
+App\Tests\Utils\Validator
+ [x] Validate username
+ [x] Validate username empty
+ [x] Validate username invalid
+ [x] Validate password
+ [x] Validate password empty
+ [x] Validate password invalid
+ [x] Validate email
+ [x] Validate email empty
+ [x] Validate email invalid
+ [x] Validate full name
+ [x] Validate email full name
+

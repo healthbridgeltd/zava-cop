@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pmd version="@project.version@" timestamp="2018-02-22T12:29:14+00:00">
+  <file name="/var/www/html/src/Command/AddUserCommand.php">
+    <violation beginline="113" endline="113" rule="UnusedFormalParameter" ruleset="Unused Code Rules" externalInfoUrl="http://phpmd.org/rules/unusedcode.html#unusedformalparameter" priority="3">
+      Avoid unused parameters such as '$output'.
+    </violation>
+    <violation beginline="113" endline="164" rule="CyclomaticComplexity" ruleset="Code Size Rules" package="App\Command" externalInfoUrl="http://phpmd.org/rules/codesize.html#cyclomaticcomplexity" class="AddUserCommand" method="interact" priority="1">
+      The method interact() has a Cyclomatic Complexity of 9. The configured cyclomatic complexity threshold is 5.
+    </violation>
+    <violation beginline="133" endline="136" rule="ElseExpression" ruleset="Clean Code Rules" externalInfoUrl="http://phpmd.org/rules/cleancode.html#elseexpression" priority="1">
+      The method interact uses an else expression. Else is never necessary and you can simplify the code to work without else.
+    </violation>
+    <violation beginline="142" endline="145" rule="ElseExpression" ruleset="Clean Code Rules" externalInfoUrl="http://phpmd.org/rules/cleancode.html#elseexpression" priority="1">
+      The method interact uses an else expression. Else is never necessary and you can simplify the code to work without else.
+    </violation>
+    <violation beginline="151" endline="154" rule="ElseExpression" ruleset="Clean Code Rules" externalInfoUrl="http://phpmd.org/rules/cleancode.html#elseexpression" priority="1">
+      The method interact uses an else expression. Else is never necessary and you can simplify the code to work without else.
+    </violation>
+    <violation beginline="160" endline="163" rule="ElseExpression" ruleset="Clean Code Rules" externalInfoUrl="http://phpmd.org/rules/cleancode.html#elseexpression" priority="1">
+      The method interact uses an else expression. Else is never necessary and you can simplify the code to work without else.
+    </violation>
+  </file>
+  <file name="/var/www/html/src/Command/DeleteUserCommand.php">
+    <violation beginline="90" endline="90" rule="UnusedFormalParameter" ruleset="Unused Code Rules" externalInfoUrl="http://phpmd.org/rules/unusedcode.html#unusedformalparameter" priority="3">
+      Avoid unused parameters such as '$output'.
+    </violation>
+    <violation beginline="111" endline="111" rule="UnusedFormalParameter" ruleset="Unused Code Rules" externalInfoUrl="http://phpmd.org/rules/unusedcode.html#unusedformalparameter" priority="3">
+      Avoid unused parameters such as '$output'.
+    </violation>
+  </file>
+  <file name="/var/www/html/src/Controller/Admin/BlogController.php">
+    <violation beginline="91" endline="91" rule="StaticAccess" ruleset="Clean Code Rules" externalInfoUrl="http://phpmd.org/rules/cleancode.html#staticaccess" priority="1">
+      Avoid using static access to class '\App\Utils\Slugger' in method 'new'.
+    </violation>
+    <violation beginline="147" endline="147" rule="StaticAccess" ruleset="Clean Code Rules" externalInfoUrl="http://phpmd.org/rules/cleancode.html#staticaccess" priority="1">
+      Avoid using static access to class '\App\Utils\Slugger' in method 'edit'.
+    </violation>
+  </file>
+  <file name="/var/www/html/src/Controller/BlogController.php">
+    <violation beginline="51" endline="59" rule="CamelCaseParameterName" ruleset="Controversial Rules" package="App\Controller" externalInfoUrl="#" class="BlogController" method="index" priority="1">
+      The parameter $_format is not named in camelCase.
+    </violation>
+    <violation beginline="51" endline="59" rule="CamelCaseVariableName" ruleset="Controversial Rules" package="App\Controller" externalInfoUrl="#" class="BlogController" method="index" priority="1">
+      The variable $_format is not named in camelCase.
+    </violation>
+  </file>
+  <file name="/var/www/html/src/EventSubscriber/CheckRequirementsSubscriber.php">
+    <violation beginline="60" endline="70" rule="CyclomaticComplexity" ruleset="Code Size Rules" package="App\EventSubscriber" externalInfoUrl="http://phpmd.org/rules/codesize.html#cyclomaticcomplexity" class="CheckRequirementsSubscriber" method="handleConsoleError" priority="1">
+      The method handleConsoleError() has a Cyclomatic Complexity of 5. The configured cyclomatic complexity threshold is 5.
+    </violation>
+    <violation beginline="76" endline="90" rule="CyclomaticComplexity" ruleset="Code Size Rules" package="App\EventSubscriber" externalInfoUrl="http://phpmd.org/rules/codesize.html#cyclomaticcomplexity" class="CheckRequirementsSubscriber" method="handleKernelException" priority="1">
+      The method handleKernelException() has a Cyclomatic Complexity of 5. The configured cyclomatic complexity threshold is 5.
+    </violation>
+  </file>
+  <file name="/var/www/html/src/EventSubscriber/RedirectToPreferredLocaleSubscriber.php">
+    <violation beginline="63" endline="83" rule="CyclomaticComplexity" ruleset="Code Size Rules" package="App\EventSubscriber" externalInfoUrl="http://phpmd.org/rules/codesize.html#cyclomaticcomplexity" class="RedirectToPreferredLocaleSubscriber" method="onKernelRequest" priority="1">
+      The method onKernelRequest() has a Cyclomatic Complexity of 5. The configured cyclomatic complexity threshold is 5.
+    </violation>
+  </file>
+  <file name="/var/www/html/src/Form/Type/DateTimePickerType.php">
+    <violation beginline="44" endline="44" rule="StaticAccess" ruleset="Clean Code Rules" externalInfoUrl="http://phpmd.org/rules/cleancode.html#staticaccess" priority="1">
+      Avoid using static access to class '\Locale' in method 'buildView'.
+    </violation>
+  </file>
+  <file name="/var/www/html/src/Utils/Markdown.php">
+    <violation beginline="31" endline="33" rule="StaticAccess" ruleset="Clean Code Rules" externalInfoUrl="http://phpmd.org/rules/cleancode.html#staticaccess" priority="1">
+      Avoid using static access to class '\HTMLPurifier_Config' in method '__construct'.
+    </violation>
+  </file>
+  <error filename="/var/www/html/src/DataFixtures/AppFixtures.php" msg="Unexpected token: [, line: 41, col: 42, file: /var/www/html/src/DataFixtures/AppFixtures.php." />
+</pmd>

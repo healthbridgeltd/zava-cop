@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PDepend>
+  <Packages>
+    <Package name="App\Command">
+      <Stats>
+        <TotalClasses>3</TotalClasses>
+        <ConcreteClasses>3</ConcreteClasses>
+        <AbstractClasses>0</AbstractClasses>
+        <Ca>0</Ca>
+        <Ce>12</Ce>
+        <A>0</A>
+        <I>1</I>
+        <D>0</D>
+      </Stats>
+      <ConcreteClasses>
+        <Class sourceFile="/var/www/html/src/Command/AddUserCommand.php">AddUserCommand</Class>
+        <Class sourceFile="/var/www/html/src/Command/DeleteUserCommand.php">DeleteUserCommand</Class>
+        <Class sourceFile="/var/www/html/src/Command/ListUsersCommand.php">ListUsersCommand</Class>
+      </ConcreteClasses>
+      <AbstractClasses/>
+      <DependsUpon>
+        <Package></Package>
+        <Package>App\Entity</Package>
+        <Package>App\Repository</Package>
+        <Package>App\Utils</Package>
+        <Package>Doctrine\ORM</Package>
+        <Package>Symfony\Component\Console\Command</Package>
+        <Package>Symfony\Component\Console\Exception</Package>
+        <Package>Symfony\Component\Console\Input</Package>
+        <Package>Symfony\Component\Console\Output</Package>
+        <Package>Symfony\Component\Console\Style</Package>
+        <Package>Symfony\Component\Security\Core\Encoder</Package>
+        <Package>Symfony\Component\Stopwatch</Package>
+      </DependsUpon>
+      <UsedBy/>
+    </Package>
+    <Package name="App\Controller\Admin">
+      <Stats>
+        <TotalClasses>1</TotalClasses>
+        <ConcreteClasses>1</ConcreteClasses>
+        <AbstractClasses>0</AbstractClasses>
+        <Ca>0</Ca>
+        <Ce>7</Ce>
+        <A>0</A>
+        <I>1</I>
+        <D>0</D>
+      </Stats>
+      <ConcreteClasses>
+        <Class sourceFile="/var/www/html/src/Controller/Admin/BlogController.php">BlogController</Class>
+      </ConcreteClasses>
+      <AbstractClasses/>
+      <DependsUpon>
+        <Package>App\Entity</Package>
+        <Package>App\Form</Package>
+        <Package>App\Repository</Package>
+        <Package>App\Utils</Package>
+        <Package>Symfony\Bundle\FrameworkBundle\Controller</Package>
+        <Package>Symfony\Component\Form\Extension\Core\Type</Package>
+        <Package>Symfony\Component\HttpFoundation</Package>
+      </DependsUpon>
+      <UsedBy/>
+    </Package>
+    <Package name="App\Controller">
+      <Stats>
+        <TotalClasses>2</TotalClasses>
+        <ConcreteClasses>2</ConcreteClasses>
+        <AbstractClasses>0</AbstractClasses>
+        <Ca>0</Ca>
+        <Ce>9</Ce>
+        <A>0</A>
+        <I>1</I>
+        <D>0</D>
+      </Stats>
+      <ConcreteClasses>
+        <Class sourceFile="/var/www/html/src/Controller/BlogController.php">BlogController</Class>
+        <Class sourceFile="/var/www/html/src/Controller/SecurityController.php">SecurityController</Class>
+      </ConcreteClasses>
+      <AbstractClasses/>
+      <DependsUpon>
+        <Package></Package>
+        <Package>App</Package>
+        <Package>App\Entity</Package>
+        <Package>App\Form</Package>
+        <Package>App\Repository</Package>
+        <Package>Symfony\Bundle\FrameworkBundle\Controller</Package>
+        <Package>Symfony\Component\EventDispatcher</Package>
+        <Package>Symfony\Component\HttpFoundation</Package>
+        <Package>Symfony\Component\Security\Http\Authentication</Package>
+      </DependsUpon>
+      <UsedBy/>
+    </Package>
+    <Package name="App\Entity">
+      <Stats>
+        <TotalClasses>4</TotalClasses>
+        <ConcreteClasses>4</ConcreteClasses>
+        <AbstractClasses>0</AbstractClasses>
+        <Ca>8</Ca>
+        <Ce>3</Ce>
+        <A>0</A>
+        <I>0.27272727272727</I>
+        <D>0.72727272727273</D>
+      </Stats>
+      <ConcreteClasses>
+        <Class sourceFile="/var/www/html/src/Entity/Comment.php">Comment</Class>
+        <Class sourceFile="/var/www/html/src/Entity/Post.php">Post</Class>
+        <Class sourceFile="/var/www/html/src/Entity/Tag.php">Tag</Class>
+        <Class sourceFile="/var/www/html/src/Entity/User.php">User</Class>
+      </ConcreteClasses>
+      <AbstractClasses/>
+      <DependsUpon>
+        <Package></Package>
+        <Package>Doctrine\Common\Collections</Package>
+        <Package>Symfony\Component\Security\Core\User</Package>
+      </DependsUpon>
+      <UsedBy>
+        <Package>App\Command</Package>
+        <Package>App\Controller</Package>
+        <Package>App\Controller\Admin</Package>
+        <Package>App\Form</Package>
+        <Package>App\Form\DataTransformer</Package>
+        <Package>App\Form\Type</Package>
+        <Package>App\Repository</Package>
+        <Package>App\Security</Package>
+      </UsedBy>
+    </Package>
+    <Package name="App\EventSubscriber">
+      <Stats>
+        <TotalClasses>4</TotalClasses>
+        <ConcreteClasses>4</ConcreteClasses>
+        <AbstractClasses>0</AbstractClasses>
+        <Ca>0</Ca>
+        <Ce>14</Ce>
+        <A>0</A>
+        <I>1</I>
+        <D>0</D>
+      </Stats>
+      <ConcreteClasses>
+        <Class sourceFile="/var/www/html/src/EventSubscriber/CheckRequirementsSubscriber.php">CheckRequirementsSubscriber</Class>
+        <Class sourceFile="/var/www/html/src/EventSubscriber/CommentNotificationSubscriber.php">CommentNotificationSubscriber</Class>
+        <Class sourceFile="/var/www/html/src/EventSubscriber/ControllerSubscriber.php">ControllerSubscriber</Class>
+        <Class sourceFile="/var/www/html/src/EventSubscriber/RedirectToPreferredLocaleSubscriber.php">RedirectToPreferredLocaleSubscriber</Class>
+      </ConcreteClasses>
+      <AbstractClasses/>
+      <DependsUpon>
+        <Package></Package>
+        <Package>App</Package>
+        <Package>App\Twig</Package>
+        <Package>Doctrine\DBAL\Exception</Package>
+        <Package>Doctrine\ORM</Package>
+        <Package>Symfony\Component\Console</Package>
+        <Package>Symfony\Component\Console\Event</Package>
+        <Package>Symfony\Component\Console\Style</Package>
+        <Package>Symfony\Component\EventDispatcher</Package>
+        <Package>Symfony\Component\HttpFoundation</Package>
+        <Package>Symfony\Component\HttpKernel</Package>
+        <Package>Symfony\Component\HttpKernel\Event</Package>
+        <Package>Symfony\Component\Routing\Generator</Package>
+        <Package>Symfony\Component\Translation</Package>
+      </DependsUpon>
+      <UsedBy/>
+    </Package>
+    <Package name="App">
+      <Stats>
+        <TotalClasses>2</TotalClasses>
+        <ConcreteClasses>2</ConcreteClasses>
+        <AbstractClasses>0</AbstractClasses>
+        <Ca>2</Ca>
+        <Ce>4</Ce>
+        <A>0</A>
+        <I>0.66666666666667</I>
+        <D>0.33333333333333</D>
+      </Stats>
+      <ConcreteClasses>
+        <Class sourceFile="/var/www/html/src/Events.php">Events</Class>
+        <Class sourceFile="/var/www/html/src/Kernel.php">Kernel</Class>
+      </ConcreteClasses>
+      <AbstractClasses/>
+      <DependsUpon>
+        <Package>Symfony\Component\Config\Loader</Package>
+        <Package>Symfony\Component\DependencyInjection</Package>
+        <Package>Symfony\Component\HttpKernel</Package>
+        <Package>Symfony\Component\Routing</Package>
+      </DependsUpon>
+      <UsedBy>
+        <Package>App\Controller</Package>
+        <Package>App\EventSubscriber</Package>
+      </UsedBy>
+    </Package>
+    <Package name="App\Form">
+      <Stats>
+        <TotalClasses>2</TotalClasses>
+        <ConcreteClasses>2</ConcreteClasses>
+        <AbstractClasses>0</AbstractClasses>
+        <Ca>2</Ca>
+        <Ce>5</Ce>
+        <A>0</A>
+        <I>0.71428571428571</I>
+        <D>0.28571428571429</D>
+      </Stats>
+      <ConcreteClasses>
+        <Class sourceFile="/var/www/html/src/Form/CommentType.php">CommentType</Class>
+        <Class sourceFile="/var/www/html/src/Form/PostType.php">PostType</Class>
+      </ConcreteClasses>
+      <AbstractClasses/>
+      <DependsUpon>
+        <Package>App\Entity</Package>
+        <Package>App\Form\Type</Package>
+        <Package>Symfony\Component\Form</Package>
+        <Package>Symfony\Component\Form\Extension\Core\Type</Package>
+        <Package>Symfony\Component\OptionsResolver</Package>
+      </DependsUpon>
+      <UsedBy>
+        <Package>App\Controller</Package>
+        <Package>App\Controller\Admin</Package>
+      </UsedBy>
+    </Package>
+    <Package name="App\Form\DataTransformer">
+      <Stats>
+        <TotalClasses>1</TotalClasses>
+        <ConcreteClasses>1</ConcreteClasses>
+        <AbstractClasses>0</AbstractClasses>
+        <Ca>1</Ca>
+        <Ce>3</Ce>
+        <A>0</A>
+        <I>0.75</I>
+        <D>0.25</D>
+      </Stats>
+      <ConcreteClasses>
+        <Class sourceFile="/var/www/html/src/Form/DataTransformer/TagArrayToStringTransformer.php">TagArrayToStringTransformer</Class>
+      </ConcreteClasses>
+      <AbstractClasses/>
+      <DependsUpon>
+        <Package>App\Entity</Package>
+        <Package>Doctrine\Common\Persistence</Package>
+        <Package>Symfony\Component\Form</Package>
+      </DependsUpon>
+      <UsedBy>
+        <Package>App\Form\Type</Package>
+      </UsedBy>
+    </Package>
+    <Package name="App\Form\Type">
+      <Stats>
+        <TotalClasses>2</TotalClasses>
+        <ConcreteClasses>2</ConcreteClasses>
+        <AbstractClasses>0</AbstractClasses>
+        <Ca>1</Ca>
+        <Ce>9</Ce>
+        <A>0</A>
+        <I>0.9</I>
+        <D>0.1</D>
+      </Stats>
+      <ConcreteClasses>
+        <Class sourceFile="/var/www/html/src/Form/Type/DateTimePickerType.php">DateTimePickerType</Class>
+        <Class sourceFile="/var/www/html/src/Form/Type/TagsInputType.php">TagsInputType</Class>
+      </ConcreteClasses>
+      <AbstractClasses/>
+      <DependsUpon>
+        <Package></Package>
+        <Package>App\Entity</Package>
+        <Package>App\Form\DataTransformer</Package>
+        <Package>App\Utils</Package>
+        <Package>Doctrine\Common\Persistence</Package>
+        <Package>Symfony\Bridge\Doctrine\Form\DataTransformer</Package>
+        <Package>Symfony\Component\Form</Package>
+        <Package>Symfony\Component\Form\Extension\Core\Type</Package>
+        <Package>Symfony\Component\OptionsResolver</Package>
+      </DependsUpon>
+      <UsedBy>
+        <Package>App\Form</Package>
+      </UsedBy>
+    </Package>
+    <Package name="App\Repository">
+      <Stats>
+        <TotalClasses>2</TotalClasses>
+        <ConcreteClasses>2</ConcreteClasses>
+        <AbstractClasses>0</AbstractClasses>
+        <Ca>3</Ca>
+        <Ce>7</Ce>
+        <A>0</A>
+        <I>0.7</I>
+        <D>0.3</D>
+      </Stats>
+      <ConcreteClasses>
+        <Class sourceFile="/var/www/html/src/Repository/PostRepository.php">PostRepository</Class>
+        <Class sourceFile="/var/www/html/src/Repository/UserRepository.php">UserRepository</Class>
+      </ConcreteClasses>
+      <AbstractClasses/>
+      <DependsUpon>
+        <Package></Package>
+        <Package>App\Entity</Package>
+        <Package>Doctrine\Bundle\DoctrineBundle\Repository</Package>
+        <Package>Doctrine\Common\Persistence</Package>
+        <Package>Doctrine\ORM</Package>
+        <Package>Pagerfanta</Package>
+        <Package>Pagerfanta\Adapter</Package>
+      </DependsUpon>
+      <UsedBy>
+        <Package>App\Command</Package>
+        <Package>App\Controller</Package>
+        <Package>App\Controller\Admin</Package>
+      </UsedBy>
+    </Package>
+    <Package name="App\Security">
+      <Stats>
+        <TotalClasses>1</TotalClasses>
+        <ConcreteClasses>1</ConcreteClasses>
+        <AbstractClasses>0</AbstractClasses>
+        <Ca>0</Ca>
+        <Ce>3</Ce>
+        <A>0</A>
+        <I>1</I>
+        <D>0</D>
+      </Stats>
+      <ConcreteClasses>
+        <Class sourceFile="/var/www/html/src/Security/PostVoter.php">PostVoter</Class>
+      </ConcreteClasses>
+      <AbstractClasses/>
+      <DependsUpon>
+        <Package>App\Entity</Package>
+        <Package>Symfony\Component\Security\Core\Authentication\Token</Package>
+        <Package>Symfony\Component\Security\Core\Authorization\Voter</Package>
+      </DependsUpon>
+      <UsedBy/>
+    </Package>
+    <Package name="App\Twig">
+      <Stats>
+        <TotalClasses>2</TotalClasses>
+        <ConcreteClasses>2</ConcreteClasses>
+        <AbstractClasses>0</AbstractClasses>
+        <Ca>1</Ca>
+        <Ce>5</Ce>
+        <A>0</A>
+        <I>0.83333333333333</I>
+        <D>0.16666666666667</D>
+      </Stats>
+      <ConcreteClasses>
+        <Class sourceFile="/var/www/html/src/Twig/AppExtension.php">AppExtension</Class>
+        <Class sourceFile="/var/www/html/src/Twig/SourceCodeExtension.php">SourceCodeExtension</Class>
+      </ConcreteClasses>
+      <AbstractClasses/>
+      <DependsUpon>
+        <Package></Package>
+        <Package>App\Utils</Package>
+        <Package>Symfony\Component\Intl</Package>
+        <Package>Twig</Package>
+        <Package>Twig\Extension</Package>
+      </DependsUpon>
+      <UsedBy>
+        <Package>App\EventSubscriber</Package>
+      </UsedBy>
+    </Package>
+    <Package name="App\Utils">
+      <Stats>
+        <TotalClasses>4</TotalClasses>
+        <ConcreteClasses>4</ConcreteClasses>
+        <AbstractClasses>0</AbstractClasses>
+        <Ca>4</Ca>
+        <Ce>2</Ce>
+        <A>0</A>
+        <I>0.33333333333333</I>
+        <D>0.66666666666667</D>
+      </Stats>
+      <ConcreteClasses>
+        <Class sourceFile="/var/www/html/src/Utils/Markdown.php">Markdown</Class>
+        <Class sourceFile="/var/www/html/src/Utils/MomentFormatConverter.php">MomentFormatConverter</Class>
+        <Class sourceFile="/var/www/html/src/Utils/Slugger.php">Slugger</Class>
+        <Class sourceFile="/var/www/html/src/Utils/Validator.php">Validator</Class>
+      </ConcreteClasses>
+      <AbstractClasses/>
+      <DependsUpon>
+        <Package></Package>
+        <Package>Symfony\Component\Console\Exception</Package>
+      </DependsUpon>
+      <UsedBy>
+        <Package>App\Command</Package>
+        <Package>App\Controller\Admin</Package>
+        <Package>App\Form\Type</Package>
+        <Package>App\Twig</Package>
+      </UsedBy>
+    </Package>
+  </Packages>
+  <Cycles/>
+</PDepend>

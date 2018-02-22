@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkstyle version="3.2.3">
+<file name="/var/www/html/src/Controller/BlogController.php">
+ <error line="43" column="31" severity="warning" message="Line exceeds 120 characters; contains 122 characters" source="Generic.Files.LineLength.TooLong"/>
+ <error line="90" column="8" severity="warning" message="Line exceeds 120 characters; contains 124 characters" source="Generic.Files.LineLength.TooLong"/>
+</file>
+<file name="/var/www/html/src/Command/ListUsersCommand.php">
+ <error line="82" column="126" severity="warning" message="Line exceeds 120 characters; contains 126 characters" source="Generic.Files.LineLength.TooLong"/>
+</file>
+<file name="/var/www/html/src/Command/AddUserCommand.php">
+ <error line="63" column="143" severity="warning" message="Line exceeds 120 characters; contains 143 characters" source="Generic.Files.LineLength.TooLong"/>
+ <error line="115" column="185" severity="warning" message="Line exceeds 120 characters; contains 185 characters" source="Generic.Files.LineLength.TooLong"/>
+ <error line="143" column="124" severity="warning" message="Line exceeds 120 characters; contains 124 characters" source="Generic.Files.LineLength.TooLong"/>
+ <error line="198" column="159" severity="warning" message="Line exceeds 120 characters; contains 159 characters" source="Generic.Files.LineLength.TooLong"/>
+ <error line="202" column="193" severity="warning" message="Line exceeds 120 characters; contains 193 characters" source="Generic.Files.LineLength.TooLong"/>
+ <error line="212" column="121" severity="warning" message="Line exceeds 120 characters; contains 121 characters" source="Generic.Files.LineLength.TooLong"/>
+</file>
+<file name="/var/www/html/src/Command/DeleteUserCommand.php">
+ <error line="130" column="145" severity="warning" message="Line exceeds 120 characters; contains 145 characters" source="Generic.Files.LineLength.TooLong"/>
+</file>
+<file name="/var/www/html/src/Twig/AppExtension.php">
+ <error line="86" column="131" severity="warning" message="Line exceeds 120 characters; contains 131 characters" source="Generic.Files.LineLength.TooLong"/>
+</file>
+<file name="/var/www/html/src/Twig/SourceCodeExtension.php">
+ <error line="43" column="130" severity="warning" message="Line exceeds 120 characters; contains 130 characters" source="Generic.Files.LineLength.TooLong"/>
+ <error line="65" column="128" severity="warning" message="Line exceeds 120 characters; contains 128 characters" source="Generic.Files.LineLength.TooLong"/>
+</file>
+<file name="/var/www/html/src/EventSubscriber/CommentNotificationSubscriber.php">
+ <error line="33" column="133" severity="warning" message="Line exceeds 120 characters; contains 133 characters" source="Generic.Files.LineLength.TooLong"/>
+</file>
+<file name="/var/www/html/src/EventSubscriber/CheckRequirementsSubscriber.php">
+ <error line="62" column="131" severity="warning" message="Line exceeds 120 characters; contains 131 characters" source="Generic.Files.LineLength.TooLong"/>
+ <error line="67" column="184" severity="warning" message="Line exceeds 120 characters; contains 184 characters" source="Generic.Files.LineLength.TooLong"/>
+ <error line="88" column="180" severity="warning" message="Line exceeds 120 characters; contains 180 characters" source="Generic.Files.LineLength.TooLong"/>
+</file>
+<file name="/var/www/html/src/EventSubscriber/RedirectToPreferredLocaleSubscriber.php">
+ <error line="46" column="139" severity="warning" message="Line exceeds 120 characters; contains 139 characters" source="Generic.Files.LineLength.TooLong"/>
+ <error line="80" column="123" severity="warning" message="Line exceeds 120 characters; contains 123 characters" source="Generic.Files.LineLength.TooLong"/>
+</file>
+<file name="/var/www/html/src/DataFixtures/AppFixtures.php">
+ <error line="235" column="46" severity="error" message="Opening brace must be the last content on the line" source="Squiz.Functions.MultiLineFunctionDeclaration.ContentAfterBrace"/>
+ <error line="235" column="93" severity="error" message="Closing brace must be on a line by itself" source="Squiz.WhiteSpace.ScopeClosingBrace.ContentBefore"/>
+ <error line="235" column="110" severity="error" message="Each PHP statement must be on a line by itself" source="Generic.Formatting.DisallowMultipleStatements.SameLine"/>
+</file>
+<file name="/var/www/html/src/Utils/Validator.php">
+ <error line="31" column="125" severity="warning" message="Line exceeds 120 characters; contains 125 characters" source="Generic.Files.LineLength.TooLong"/>
+</file>
+</checkstyle>
+

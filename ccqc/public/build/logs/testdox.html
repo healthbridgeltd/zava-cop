@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <title>Test Documentation</title>
+        <style>
+            body {
+                text-rendering: optimizeLegibility;
+                font-variant-ligatures: common-ligatures;
+                font-kerning: normal;
+                margin-left: 2em;
+            }
+
+            body > ul > li {
+                font-family: Source Serif Pro, PT Sans, Trebuchet MS, Helvetica, Arial;
+                font-size: 2em;
+            }
+
+            h2 {
+                font-family: Tahoma, Helvetica, Arial;
+                font-size: 3em;
+            }
+
+            ul {
+                list-style: none;
+                margin-bottom: 1em;
+            }
+        </style>
+    </head>
+    <body>
+        <h2 id="App\Tests\Command\AddUserCommandTest">App\Tests\Command\AddUserCommand</h2>
+        <ul>
+            <li style="color: #ef2929;">❌ Create user non interactive </li>
+            <li style="color: #ef2929;">❌ Create user interactive </li>
+        </ul>
+        <h2 id="App\Tests\Controller\Admin\BlogControllerTest">App\Tests\Controller\Admin\BlogController</h2>
+        <ul>
+            <li style="color: #ef2929;">❌ Access denied for regular users </li>
+            <li style="color: #ef2929;">❌ Admin backend home page</li>
+            <li style="color: #ef2929;">❌ Admin new post</li>
+            <li style="color: #ef2929;">❌ Admin show post</li>
+            <li style="color: #ef2929;">❌ Admin edit post</li>
+            <li style="color: #ef2929;">❌ Admin delete post</li>
+        </ul>
+        <h2 id="App\Tests\Controller\BlogControllerTest">App\Tests\Controller\BlogController</h2>
+        <ul>
+            <li style="color: #ef2929;">❌ Index</li>
+            <li style="color: #ef2929;">❌ Rss</li>
+            <li style="color: #ef2929;">❌ New comment</li>
+        </ul>
+        <h2 id="App\Tests\Controller\DefaultControllerTest">App\Tests\Controller\DefaultController</h2>
+        <ul>
+            <li style="color: #ef2929;">❌ Public urls </li>
+            <li style="color: #ef2929;">❌ Public blog post</li>
+            <li style="color: #ef2929;">❌ Secure urls </li>
+        </ul>
+        <h2 id="App\Tests\Form\DataTransformer\TagArrayToStringTransformerTest">App\Tests\Form\DataTransformer\TagArrayToStringTransformer</h2>
+        <ul>
+            <li style="color: #555753;">✓ Create the right amount of tags</li>
+            <li style="color: #555753;">✓ Create the right amount of tags with too many commas</li>
+            <li style="color: #555753;">✓ Trim names</li>
+            <li style="color: #555753;">✓ Duplicate names</li>
+            <li style="color: #555753;">✓ Uses already defined tags</li>
+            <li style="color: #555753;">✓ Transform</li>
+        </ul>
+        <h2 id="App\Tests\Utils\SluggerTest">App\Tests\Utils\Slugger</h2>
+        <ul>
+            <li style="color: #555753;">✓ Slugify </li>
+        </ul>
+        <h2 id="App\Tests\Utils\ValidatorTest">App\Tests\Utils\Validator</h2>
+        <ul>
+            <li style="color: #555753;">✓ Validate username</li>
+            <li style="color: #555753;">✓ Validate username empty</li>
+            <li style="color: #555753;">✓ Validate username invalid</li>
+            <li style="color: #555753;">✓ Validate password</li>
+            <li style="color: #555753;">✓ Validate password empty</li>
+            <li style="color: #555753;">✓ Validate password invalid</li>
+            <li style="color: #555753;">✓ Validate email</li>
+            <li style="color: #555753;">✓ Validate email empty</li>
+            <li style="color: #555753;">✓ Validate email invalid</li>
+            <li style="color: #555753;">✓ Validate full name</li>
+            <li style="color: #555753;">✓ Validate email full name</li>
+        </ul>
+    </body>
+</html>

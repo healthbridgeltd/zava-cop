@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="Project Test Suite" tests="49" assertions="36" failures="0" errors="24" time="0.260725">
+    <testsuite name="App\Tests\Command\AddUserCommandTest" file="/var/www/html/tests/Command/AddUserCommandTest.php" tests="4" assertions="0" failures="0" errors="4" time="0.165305">
+      <testsuite name="App\Tests\Command\AddUserCommandTest::testCreateUserNonInteractive" tests="2" assertions="0" failures="0" errors="2" time="0.129527">
+        <testcase name="testCreateUserNonInteractive with data set #0" assertions="0" time="0.119242">
+          <error type="Symfony\Component\Console\Exception\RuntimeException">App\Tests\Command\AddUserCommandTest::testCreateUserNonInteractive with data set #0 (false)
+Symfony\Component\Console\Exception\RuntimeException: There is already a user registered with the "chuck_norris" username.
+
+/var/www/html/src/Command/AddUserCommand.php:212
+/var/www/html/src/Command/AddUserCommand.php:182
+/var/www/html/vendor/symfony/console/Command/Command.php:252
+/var/www/html/vendor/symfony/console/Tester/CommandTester.php:79
+/var/www/html/tests/Command/AddUserCommandTest.php:128
+/var/www/html/tests/Command/AddUserCommandTest.php:55
+</error>
+        </testcase>
+        <testcase name="testCreateUserNonInteractive with data set #1" assertions="0" time="0.010285">
+          <error type="Symfony\Component\Console\Exception\RuntimeException">App\Tests\Command\AddUserCommandTest::testCreateUserNonInteractive with data set #1 (true)
+Symfony\Component\Console\Exception\RuntimeException: There is already a user registered with the "chuck_norris" username.
+
+/var/www/html/src/Command/AddUserCommand.php:212
+/var/www/html/src/Command/AddUserCommand.php:182
+/var/www/html/vendor/symfony/console/Command/Command.php:252
+/var/www/html/vendor/symfony/console/Tester/CommandTester.php:79
+/var/www/html/tests/Command/AddUserCommandTest.php:128
+/var/www/html/tests/Command/AddUserCommandTest.php:55
+</error>
+        </testcase>
+      </testsuite>
+      <testsuite name="App\Tests\Command\AddUserCommandTest::testCreateUserInteractive" tests="2" assertions="0" failures="0" errors="2" time="0.035778">
+        <testcase name="testCreateUserInteractive with data set #0" assertions="0" time="0.019618">
+          <error type="Symfony\Component\Console\Exception\RuntimeException">App\Tests\Command\AddUserCommandTest::testCreateUserInteractive with data set #0 (false)
+Symfony\Component\Console\Exception\RuntimeException: There is already a user registered with the "chuck_norris" username.
+
+/var/www/html/src/Command/AddUserCommand.php:212
+/var/www/html/src/Command/AddUserCommand.php:182
+/var/www/html/vendor/symfony/console/Command/Command.php:252
+/var/www/html/vendor/symfony/console/Tester/CommandTester.php:79
+/var/www/html/tests/Command/AddUserCommandTest.php:128
+/var/www/html/tests/Command/AddUserCommandTest.php:75
+</error>
+        </testcase>
+        <testcase name="testCreateUserInteractive with data set #1" assertions="0" time="0.016160">
+          <error type="Symfony\Component\Console\Exception\RuntimeException">App\Tests\Command\AddUserCommandTest::testCreateUserInteractive with data set #1 (true)
+Symfony\Component\Console\Exception\RuntimeException: There is already a user registered with the "chuck_norris" username.
+
+/var/www/html/src/Command/AddUserCommand.php:212
+/var/www/html/src/Command/AddUserCommand.php:182
+/var/www/html/vendor/symfony/console/Command/Command.php:252
+/var/www/html/vendor/symfony/console/Tester/CommandTester.php:79
+/var/www/html/tests/Command/AddUserCommandTest.php:128
+/var/www/html/tests/Command/AddUserCommandTest.php:75
+</error>
+        </testcase>
+      </testsuite>
+    </testsuite>
+    <testsuite name="App\Tests\Controller\Admin\BlogControllerTest" file="/var/www/html/tests/Controller/Admin/BlogControllerTest.php" tests="9" assertions="0" failures="0" errors="9" time="0.038755">
+      <testsuite name="App\Tests\Controller\Admin\BlogControllerTest::testAccessDeniedForRegularUsers" tests="4" assertions="0" failures="0" errors="4" time="0.017940">
+        <testcase name="testAccessDeniedForRegularUsers with data set #0" assertions="0" time="0.004635">
+          <error type="Symfony\Component\DependencyInjection\Exception\ServiceNotFoundException">App\Tests\Controller\Admin\BlogControllerTest::testAccessDeniedForRegularUsers with data set #0 ('GET', '/en/admin/post/')
+Symfony\Component\DependencyInjection\Exception\ServiceNotFoundException: You have requested a non-existent service "test.client".
+
+/var/www/html/vendor/symfony/dependency-injection/Container.php:270
+/var/www/html/vendor/symfony/framework-bundle/Test/WebTestCase.php:35
+/var/www/html/tests/Controller/Admin/BlogControllerTest.php:41
+</error>
+        </testcase>
+        <testcase name="testAccessDeniedForRegularUsers with data set #1" assertions="0" time="0.004220">
+          <error type="Symfony\Component\DependencyInjection\Exception\ServiceNotFoundException">App\Tests\Controller\Admin\BlogControllerTest::testAccessDeniedForRegularUsers with data set #1 ('GET', '/en/admin/post/1')
+Symfony\Component\DependencyInjection\Exception\ServiceNotFoundException: You have requested a non-existent service "test.client".
+
+/var/www/html/vendor/symfony/dependency-injection/Container.php:270
+/var/www/html/vendor/symfony/framework-bundle/Test/WebTestCase.php:35
+/var/www/html/tests/Controller/Admin/BlogControllerTest.php:41
+</error>
+        </testcase>
+        <testcase name="testAccessDeniedForRegularUsers with data set #2" assertions="0" time="0.004124">
+          <error type="Symfony\Component\DependencyInjection\Exception\ServiceNotFoundException">App\Tests\Controller\Admin\BlogControllerTest::testAccessDeniedForRegularUsers with data set #2 ('GET', '/en/admin/post/1/edit')
+Symfony\Component\DependencyInjection\Exception\ServiceNotFoundException: You have requested a non-existent service "test.client".
+
+/var/www/html/vendor/symfony/dependency-injection/Container.php:270
+/var/www/html/vendor/symfony/framework-bundle/Test/WebTestCase.php:35
+/var/www/html/tests/Controller/Admin/BlogControllerTest.php:41
+</error>
+        </testcase>
+        <testcase name="testAccessDeniedForRegularUsers with data set #3" assertions="0" time="0.004961">
+          <error type="Symfony\Component\DependencyInjection\Exception\ServiceNotFoundException">App\Tests\Controller\Admin\BlogControllerTest::testAccessDeniedForRegularUsers with data set #3 ('POST', '/en/admin/post/1/delete')
+Symfony\Component\DependencyInjection\Exception\ServiceNotFoundException: You have requested a non-existent service "test.client".
+
+/var/www/html/vendor/symfony/dependency-injection/Container.php:270
+/var/www/html/vendor/symfony/framework-bundle/Test/WebTestCase.php:35
+/var/www/html/tests/Controller/Admin/BlogControllerTest.php:41
+</error>
+        </testcase>
+      </testsuite>
+      <testcase name="testAdminBackendHomePage" class="App\Tests\Controller\Admin\BlogControllerTest" file="/var/www/html/tests/Controller/Admin/BlogControllerTest.php" line="57" assertions="0" time="0.004049">
+        <error type="Symfony\Component\DependencyInjection\Exception\ServiceNotFoundException">App\Tests\Controller\Admin\BlogControllerTest::testAdminBackendHomePage
+Symfony\Component\DependencyInjection\Exception\ServiceNotFoundException: You have requested a non-existent service "test.client".
+
+/var/www/html/vendor/symfony/dependency-injection/Container.php:270
+/var/www/html/vendor/symfony/framework-bundle/Test/WebTestCase.php:35
+/var/www/html/tests/Controller/Admin/BlogControllerTest.php:60
+</error>
+      </testcase>
+      <testcase name="testAdminNewPost" class="App\Tests\Controller\Admin\BlogControllerTest" file="/var/www/html/tests/Controller/Admin/BlogControllerTest.php" line="80" assertions="0" time="0.003995">
+        <error type="Symfony\Component\DependencyInjection\Exception\ServiceNotFoundException">App\Tests\Controller\Admin\BlogControllerTest::testAdminNewPost
+Symfony\Component\DependencyInjection\Exception\ServiceNotFoundException: You have requested a non-existent service "test.client".
+
+/var/www/html/vendor/symfony/dependency-injection/Container.php:270
+/var/www/html/vendor/symfony/framework-bundle/Test/WebTestCase.php:35
+/var/www/html/tests/Controller/Admin/BlogControllerTest.php:87
+</error>
+      </testcase>
+      <testcase name="testAdminShowPost" class="App\Tests\Controller\Admin\BlogControllerTest" file="/var/www/html/tests/Controller/Admin/BlogControllerTest.php" line="108" assertions="0" time="0.004375">
+        <error type="Symfony\Component\DependencyInjection\Exception\ServiceNotFoundException">App\Tests\Controller\Admin\BlogControllerTest::testAdminShowPost
+Symfony\Component\DependencyInjection\Exception\ServiceNotFoundException: You have requested a non-existent service "test.client".
+
+/var/www/html/vendor/symfony/dependency-injection/Container.php:270
+/var/www/html/vendor/symfony/framework-bundle/Test/WebTestCase.php:35
+/var/www/html/tests/Controller/Admin/BlogControllerTest.php:111
+</error>
+      </testcase>
+      <testcase name="testAdminEditPost" class="App\Tests\Controller\Admin\BlogControllerTest" file="/var/www/html/tests/Controller/Admin/BlogControllerTest.php" line="125" assertions="0" time="0.003982">
+        <error type="Symfony\Component\DependencyInjection\Exception\ServiceNotFoundException">App\Tests\Controller\Admin\BlogControllerTest::testAdminEditPost
+Symfony\Component\DependencyInjection\Exception\ServiceNotFoundException: You have requested a non-existent service "test.client".
+
+/var/www/html/vendor/symfony/dependency-injection/Container.php:270
+/var/www/html/vendor/symfony/framework-bundle/Test/WebTestCase.php:35
+/var/www/html/tests/Controller/Admin/BlogControllerTest.php:130
+</error>
+      </testcase>
+      <testcase name="testAdminDeletePost" class="App\Tests\Controller\Admin\BlogControllerTest" file="/var/www/html/tests/Controller/Admin/BlogControllerTest.php" line="152" assertions="0" time="0.004414">
+        <error type="Symfony\Component\DependencyInjection\Exception\ServiceNotFoundException">App\Tests\Controller\Admin\BlogControllerTest::testAdminDeletePost
+Symfony\Component\DependencyInjection\Exception\ServiceNotFoundException: You have requested a non-existent service "test.client".
+
+/var/www/html/vendor/symfony/dependency-injection/Container.php:270
+/var/www/html/vendor/symfony/framework-bundle/Test/WebTestCase.php:35
+/var/www/html/tests/Controller/Admin/BlogControllerTest.php:155
+</error>
+      </testcase>
+    </testsuite>
+    <testsuite name="App\Tests\Controller\BlogControllerTest" file="/var/www/html/tests/Controller/BlogControllerTest.php" tests="3" assertions="0" failures="0" errors="3" time="0.013588">
+      <testcase name="testIndex" class="App\Tests\Controller\BlogControllerTest" file="/var/www/html/tests/Controller/BlogControllerTest.php" line="29" assertions="0" time="0.004599">
+        <error type="Symfony\Component\DependencyInjection\Exception\ServiceNotFoundException">App\Tests\Controller\BlogControllerTest::testIndex
+Symfony\Component\DependencyInjection\Exception\ServiceNotFoundException: You have requested a non-existent service "test.client".
+
+/var/www/html/vendor/symfony/dependency-injection/Container.php:270
+/var/www/html/vendor/symfony/framework-bundle/Test/WebTestCase.php:35
+/var/www/html/tests/Controller/BlogControllerTest.php:31
+</error>
+      </testcase>
+      <testcase name="testRss" class="App\Tests\Controller\BlogControllerTest" file="/var/www/html/tests/Controller/BlogControllerTest.php" line="41" assertions="0" time="0.004529">
+        <error type="Symfony\Component\DependencyInjection\Exception\ServiceNotFoundException">App\Tests\Controller\BlogControllerTest::testRss
+Symfony\Component\DependencyInjection\Exception\ServiceNotFoundException: You have requested a non-existent service "test.client".
+
+/var/www/html/vendor/symfony/dependency-injection/Container.php:270
+/var/www/html/vendor/symfony/framework-bundle/Test/WebTestCase.php:35
+/var/www/html/tests/Controller/BlogControllerTest.php:43
+</error>
+      </testcase>
+      <testcase name="testNewComment" class="App\Tests\Controller\BlogControllerTest" file="/var/www/html/tests/Controller/BlogControllerTest.php" line="64" assertions="0" time="0.004460">
+        <error type="Symfony\Component\DependencyInjection\Exception\ServiceNotFoundException">App\Tests\Controller\BlogControllerTest::testNewComment
+Symfony\Component\DependencyInjection\Exception\ServiceNotFoundException: You have requested a non-existent service "test.client".
+
+/var/www/html/vendor/symfony/dependency-injection/Container.php:270
+/var/www/html/vendor/symfony/framework-bundle/Test/WebTestCase.php:35
+/var/www/html/tests/Controller/BlogControllerTest.php:67
+</error>
+      </testcase>
+    </testsuite>
+    <testsuite name="App\Tests\Controller\DefaultControllerTest" file="/var/www/html/tests/Controller/DefaultControllerTest.php" tests="8" assertions="0" failures="0" errors="8" time="0.034021">
+      <testsuite name="App\Tests\Controller\DefaultControllerTest::testPublicUrls" tests="3" assertions="0" failures="0" errors="3" time="0.012910">
+        <testcase name="testPublicUrls with data set #0" assertions="0" time="0.004803">
+          <error type="Symfony\Component\DependencyInjection\Exception\ServiceNotFoundException">App\Tests\Controller\DefaultControllerTest::testPublicUrls with data set #0 ('/')
+Symfony\Component\DependencyInjection\Exception\ServiceNotFoundException: You have requested a non-existent service "test.client".
+
+/var/www/html/vendor/symfony/dependency-injection/Container.php:270
+/var/www/html/vendor/symfony/framework-bundle/Test/WebTestCase.php:35
+/var/www/html/tests/Controller/DefaultControllerTest.php:39
+</error>
+        </testcase>
+        <testcase name="testPublicUrls with data set #1" assertions="0" time="0.004132">
+          <error type="Symfony\Component\DependencyInjection\Exception\ServiceNotFoundException">App\Tests\Controller\DefaultControllerTest::testPublicUrls with data set #1 ('/en/blog/')
+Symfony\Component\DependencyInjection\Exception\ServiceNotFoundException: You have requested a non-existent service "test.client".
+
+/var/www/html/vendor/symfony/dependency-injection/Container.php:270
+/var/www/html/vendor/symfony/framework-bundle/Test/WebTestCase.php:35
+/var/www/html/tests/Controller/DefaultControllerTest.php:39
+</error>
+        </testcase>
+        <testcase name="testPublicUrls with data set #2" assertions="0" time="0.003975">
+          <error type="Symfony\Component\DependencyInjection\Exception\ServiceNotFoundException">App\Tests\Controller\DefaultControllerTest::testPublicUrls with data set #2 ('/en/login')
+Symfony\Component\DependencyInjection\Exception\ServiceNotFoundException: You have requested a non-existent service "test.client".
+
+/var/www/html/vendor/symfony/dependency-injection/Container.php:270
+/var/www/html/vendor/symfony/framework-bundle/Test/WebTestCase.php:35
+/var/www/html/tests/Controller/DefaultControllerTest.php:39
+</error>
+        </testcase>
+      </testsuite>
+      <testcase name="testPublicBlogPost" class="App\Tests\Controller\DefaultControllerTest" file="/var/www/html/tests/Controller/DefaultControllerTest.php" line="56" assertions="0" time="0.004173">
+        <error type="Symfony\Component\DependencyInjection\Exception\ServiceNotFoundException">App\Tests\Controller\DefaultControllerTest::testPublicBlogPost
+Symfony\Component\DependencyInjection\Exception\ServiceNotFoundException: You have requested a non-existent service "test.client".
+
+/var/www/html/vendor/symfony/dependency-injection/Container.php:270
+/var/www/html/vendor/symfony/framework-bundle/Test/WebTestCase.php:35
+/var/www/html/tests/Controller/DefaultControllerTest.php:58
+</error>
+      </testcase>
+      <testsuite name="App\Tests\Controller\DefaultControllerTest::testSecureUrls" tests="4" assertions="0" failures="0" errors="4" time="0.016938">
+        <testcase name="testSecureUrls with data set #0" assertions="0" time="0.004403">
+          <error type="Symfony\Component\DependencyInjection\Exception\ServiceNotFoundException">App\Tests\Controller\DefaultControllerTest::testSecureUrls with data set #0 ('/en/admin/post/')
+Symfony\Component\DependencyInjection\Exception\ServiceNotFoundException: You have requested a non-existent service "test.client".
+
+/var/www/html/vendor/symfony/dependency-injection/Container.php:270
+/var/www/html/vendor/symfony/framework-bundle/Test/WebTestCase.php:35
+/var/www/html/tests/Controller/DefaultControllerTest.php:75
+</error>
+        </testcase>
+        <testcase name="testSecureUrls with data set #1" assertions="0" time="0.003999">
+          <error type="Symfony\Component\DependencyInjection\Exception\ServiceNotFoundException">App\Tests\Controller\DefaultControllerTest::testSecureUrls with data set #1 ('/en/admin/post/new')
+Symfony\Component\DependencyInjection\Exception\ServiceNotFoundException: You have requested a non-existent service "test.client".
+
+/var/www/html/vendor/symfony/dependency-injection/Container.php:270
+/var/www/html/vendor/symfony/framework-bundle/Test/WebTestCase.php:35
+/var/www/html/tests/Controller/DefaultControllerTest.php:75
+</error>
+        </testcase>
+        <testcase name="testSecureUrls with data set #2" assertions="0" time="0.004100">
+          <error type="Symfony\Component\DependencyInjection\Exception\ServiceNotFoundException">App\Tests\Controller\DefaultControllerTest::testSecureUrls with data set #2 ('/en/admin/post/1')
+Symfony\Component\DependencyInjection\Exception\ServiceNotFoundException: You have requested a non-existent service "test.client".
+
+/var/www/html/vendor/symfony/dependency-injection/Container.php:270
+/var/www/html/vendor/symfony/framework-bundle/Test/WebTestCase.php:35
+/var/www/html/tests/Controller/DefaultControllerTest.php:75
+</error>
+        </testcase>
+        <testcase name="testSecureUrls with data set #3" assertions="0" time="0.004436">
+          <error type="Symfony\Component\DependencyInjection\Exception\ServiceNotFoundException">App\Tests\Controller\DefaultControllerTest::testSecureUrls with data set #3 ('/en/admin/post/1/edit')
+Symfony\Component\DependencyInjection\Exception\ServiceNotFoundException: You have requested a non-existent service "test.client".
+
+/var/www/html/vendor/symfony/dependency-injection/Container.php:270
+/var/www/html/vendor/symfony/framework-bundle/Test/WebTestCase.php:35
+/var/www/html/tests/Controller/DefaultControllerTest.php:75
+</error>
+        </testcase>
+      </testsuite>
+    </testsuite>
+    <testsuite name="App\Tests\Form\DataTransformer\TagArrayToStringTransformerTest" file="/var/www/html/tests/Form/DataTransformer/TagArrayToStringTransformerTest.php" tests="6" assertions="10" failures="0" errors="0" time="0.006625">
+      <testcase name="testCreateTheRightAmountOfTags" class="App\Tests\Form\DataTransformer\TagArrayToStringTransformerTest" file="/var/www/html/tests/Form/DataTransformer/TagArrayToStringTransformerTest.php" line="30" assertions="2" time="0.005401"/>
+      <testcase name="testCreateTheRightAmountOfTagsWithTooManyCommas" class="App\Tests\Form\DataTransformer\TagArrayToStringTransformerTest" file="/var/www/html/tests/Form/DataTransformer/TagArrayToStringTransformerTest.php" line="42" assertions="2" time="0.000298"/>
+      <testcase name="testTrimNames" class="App\Tests\Form\DataTransformer\TagArrayToStringTransformerTest" file="/var/www/html/tests/Form/DataTransformer/TagArrayToStringTransformerTest.php" line="53" assertions="1" time="0.000231"/>
+      <testcase name="testDuplicateNames" class="App\Tests\Form\DataTransformer\TagArrayToStringTransformerTest" file="/var/www/html/tests/Form/DataTransformer/TagArrayToStringTransformerTest.php" line="63" assertions="1" time="0.000231"/>
+      <testcase name="testUsesAlreadyDefinedTags" class="App\Tests\Form\DataTransformer\TagArrayToStringTransformerTest" file="/var/www/html/tests/Form/DataTransformer/TagArrayToStringTransformerTest.php" line="73" assertions="3" time="0.000255"/>
+      <testcase name="testTransform" class="App\Tests\Form\DataTransformer\TagArrayToStringTransformerTest" file="/var/www/html/tests/Form/DataTransformer/TagArrayToStringTransformerTest.php" line="90" assertions="1" time="0.000209"/>
+    </testsuite>
+    <testsuite name="App\Tests\Utils\SluggerTest" file="/var/www/html/tests/Utils/SluggerTest.php" tests="8" assertions="8" failures="0" errors="0" time="0.000774">
+      <testsuite name="App\Tests\Utils\SluggerTest::testSlugify" tests="8" assertions="8" failures="0" errors="0" time="0.000774">
+        <testcase name="testSlugify with data set #0" assertions="1" time="0.000207"/>
+        <testcase name="testSlugify with data set #1" assertions="1" time="0.000085"/>
+        <testcase name="testSlugify with data set #2" assertions="1" time="0.000080"/>
+        <testcase name="testSlugify with data set #3" assertions="1" time="0.000078"/>
+        <testcase name="testSlugify with data set #4" assertions="1" time="0.000078"/>
+        <testcase name="testSlugify with data set #5" assertions="1" time="0.000085"/>
+        <testcase name="testSlugify with data set #6" assertions="1" time="0.000080"/>
+        <testcase name="testSlugify with data set #7" assertions="1" time="0.000081"/>
+      </testsuite>
+    </testsuite>
+    <testsuite name="App\Tests\Utils\ValidatorTest" file="/var/www/html/tests/Utils/ValidatorTest.php" tests="11" assertions="18" failures="0" errors="0" time="0.001658">
+      <testcase name="testValidateUsername" class="App\Tests\Utils\ValidatorTest" file="/var/www/html/tests/Utils/ValidatorTest.php" line="28" assertions="1" time="0.000132"/>
+      <testcase name="testValidateUsernameEmpty" class="App\Tests\Utils\ValidatorTest" file="/var/www/html/tests/Utils/ValidatorTest.php" line="35" assertions="2" time="0.000593"/>
+      <testcase name="testValidateUsernameInvalid" class="App\Tests\Utils\ValidatorTest" file="/var/www/html/tests/Utils/ValidatorTest.php" line="42" assertions="2" time="0.000140"/>
+      <testcase name="testValidatePassword" class="App\Tests\Utils\ValidatorTest" file="/var/www/html/tests/Utils/ValidatorTest.php" line="49" assertions="1" time="0.000077"/>
+      <testcase name="testValidatePasswordEmpty" class="App\Tests\Utils\ValidatorTest" file="/var/www/html/tests/Utils/ValidatorTest.php" line="56" assertions="2" time="0.000119"/>
+      <testcase name="testValidatePasswordInvalid" class="App\Tests\Utils\ValidatorTest" file="/var/www/html/tests/Utils/ValidatorTest.php" line="63" assertions="2" time="0.000117"/>
+      <testcase name="testValidateEmail" class="App\Tests\Utils\ValidatorTest" file="/var/www/html/tests/Utils/ValidatorTest.php" line="70" assertions="1" time="0.000072"/>
+      <testcase name="testValidateEmailEmpty" class="App\Tests\Utils\ValidatorTest" file="/var/www/html/tests/Utils/ValidatorTest.php" line="77" assertions="2" time="0.000114"/>
+      <testcase name="testValidateEmailInvalid" class="App\Tests\Utils\ValidatorTest" file="/var/www/html/tests/Utils/ValidatorTest.php" line="84" assertions="2" time="0.000113"/>
+      <testcase name="testValidateFullName" class="App\Tests\Utils\ValidatorTest" file="/var/www/html/tests/Utils/ValidatorTest.php" line="91" assertions="1" time="0.000070"/>
+      <testcase name="testValidateEmailFullName" class="App\Tests\Utils\ValidatorTest" file="/var/www/html/tests/Utils/ValidatorTest.php" line="98" assertions="2" time="0.000111"/>
+    </testsuite>
+  </testsuite>
+</testsuites>
