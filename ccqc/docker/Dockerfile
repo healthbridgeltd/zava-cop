@@ -18,7 +18,8 @@ RUN set -ex \
     && pecl install xdebug-2.6.0beta1 \
     && docker-php-ext-enable xdebug \
     && a2enmod expires \
-    && a2enmod rewrite
+    && a2enmod rewrite \
+    && mkdir -p /var/lib/php/session
 
 # use layers, luke
 ENV COMPOSER_HOME '/usr/lib/composer'
