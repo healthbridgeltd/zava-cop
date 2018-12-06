@@ -8,7 +8,7 @@ import time
 from threading import Thread
 
 # Replaces with your configuration information
-redis_host = "localhost"
+redis_host = "0.0.0.0"
 redis_port = 6379
 redis_password = ""
 
