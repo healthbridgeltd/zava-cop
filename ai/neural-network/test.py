@@ -3,12 +3,6 @@ from array import *
 import numpy
 
 input_nodes = 784
-hidden_layers = int(input("How many hidden layers? [1]") or "1")
-hidden_nodes = int(input("How many hidden nodes? [100]") or "100")
-output_nodes = int(input("How many output nodes? [10]") or "10")
-learning_rate = float(input("Please enter a learning rate [0.3]") or "0.3")
-
-input_nodes = int(input("How many input nodes? [784] ") or "784")
 hidden_layers = int(input("How many hidden layers? [1] ") or "1")
 hidden_nodes = []
 for i in range(0, hidden_layers):
