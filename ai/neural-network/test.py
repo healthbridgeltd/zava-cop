@@ -1,4 +1,5 @@
-from neuralNetwork import neuralNetwork
+from neuralNetworkMultiLayer import neuralNetwork
+from array import *
 import numpy
 
 input_nodes = 784
@@ -6,7 +7,15 @@ hidden_nodes = 100
 output_nodes = 10
 learning_rate = 0.3
 
-n = neuralNetwork(input_nodes, hidden_nodes, output_nodes, learning_rate)
+input_nodes = int(input("How many input nodes? [784] ") or "784")
+hidden_layers = int(input("How many hidden layers? [1] ") or "1")
+hidden_nodes = []
+for i in range(0, hidden_layers):
+  hidden_nodes.append(int(input("How many nodes in hidden layer " + str(i) + "? [100] ") or "100"))
+output_nodes = int(input("How many output nodes? [10] ") or "10")
+learning_rate = float(input("What is the required learning rate? [0.3] ") or "0.3")
+
+n = neuralNetwork(input_nodes, hidden_layers, hidden_nodes, output_nodes, learning_rate)
 
 scorecard = []
 for i in range(0, 10):
