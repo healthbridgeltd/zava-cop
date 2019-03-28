@@ -9,6 +9,7 @@ for i in range(0, hidden_layers):
   hidden_nodes.append(int(input("How many nodes in hidden layer " + str(i) + "? [100] ") or "100"))
 output_nodes = int(input("How many output nodes? [10] ") or "10")
 learning_rate = float(input("What is the required learning rate? [0.3] ") or "0.3")
+epochs = int(input("How many output epochs? [1] ") or "1")
 
 n = neuralNetwork(input_nodes, hidden_layers, hidden_nodes, output_nodes, learning_rate)
 
@@ -25,19 +26,21 @@ training_data_file.close()
 
 # Train network.
 print("Training the network...")
-for record in training_data_list:
-  # Split by commas.
-  all_values = record.split(',')
+for e in range(epochs):
+  for record in training_data_list:
+    # Split by commas.
+    all_values = record.split(',')
 
-  # Scale and shift inputs.
-  inputs = (numpy.asfarray(all_values[1:]) / 255.0 * 0.99) + 0.01
+    # Scale and shift inputs.
+    inputs = (numpy.asfarray(all_values[1:]) / 255.0 * 0.99) + 0.01
 
-  # Create target output values (all 0.01 except target output, which is 0.99).
-  targets = numpy.zeros(output_nodes) + 0.01
+    # Create target output values (all 0.01 except target output, which is 0.99).
+    targets = numpy.zeros(output_nodes) + 0.01
 
-  # all_values[0] holds the target label for the record.
-  targets[int(all_values[0])] = 0.99
-  n.train(inputs, targets)
+    # all_values[0] holds the target label for the record.
+    targets[int(all_values[0])] = 0.99
+    n.train(inputs, targets)
+    pass
   pass
 
 # Test network.
