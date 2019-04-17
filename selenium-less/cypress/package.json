@@ -1,0 +1,12 @@
+{
+  "name": "selenium-cypress",
+  "version": "1.0.0",
+  "description": "experimentation with cypress",
+  "scripts": {
+    "test": "cypress open"
+  },
+  "author": "Lee Rhodes",
+  "devDependencies": {
+    "cypress": "^3.2.0"
+  }
+}

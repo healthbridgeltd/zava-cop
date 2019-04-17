@@ -1,0 +1,15 @@
+{
+  "name": "lambda-cucumber",
+  "version": "0.0.1",
+  "description": "experiment in lambda e2e tests",
+  "scripts": {
+    "test": "cucumber-js"
+  },
+  "author": "Lee Rhodes",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "4.2.0",
+    "cucumber": "5.1.0",
+    "puppeteer-lambda": "1.0.15"
+  }
+}

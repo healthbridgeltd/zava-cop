@@ -1,0 +1,12 @@
+{
+  "name": "selenium-taiko",
+  "version": "1.0.0",
+  "description": "experimentation with taiko",
+  "scripts": {
+    "test": "taiko open"
+  },
+  "author": "Lee Rhodes",
+  "devDependencies": {
+    "taiko": "^0.6.0"
+  }
+}
