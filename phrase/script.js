@@ -21,5 +21,5 @@ i18n.setLocale(args[0])
 
 console.log(i18n.__('phrase.hello'))
 console.log(i18n.__('phrase.greeting'))
-console.log(i18n.__('phrase.introduce'), 'Kohei')
-console.log(i18n.__n('phrase.apple', 1))
+// console.log() // For '3. Placeholders'
+// console.log() // For '4. Pluralization'
