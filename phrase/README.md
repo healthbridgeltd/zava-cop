@@ -54,7 +54,7 @@ phrase.hello
 ### 3. Placeholders
 
 - You can also use the place holder, currently, the third line shows `I am {{ name }}`
-- Update the third one to `i18n.__('phrase.introduce', 'YOUR NAME')`
+- Update the third one to `i18n.__('phrase.introduce', { name: 'YOUR NAME'})` (or if it doesn't work, `i18n.__('phrase.introduce', 'YOUR NAME')`)
   - The format is supported by the library https://github.com/mashpie/i18n-node#i18n__
   - Phrase supports different formats of placeholders (e.g. Rails, Larabel etc) https://help.phrase.com/help/working-with-placeholders
 
