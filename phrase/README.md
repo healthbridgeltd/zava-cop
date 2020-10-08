@@ -4,6 +4,7 @@
 
 For Mac users, it's easy to install with homebrew!
 ```
+$ brew tap phrase/brewed
 $ brew install phrase
 ```
 
