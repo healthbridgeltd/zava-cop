@@ -1,5 +1,3 @@
-
-
 # Preparation
 
 ## Install Phrase command
@@ -29,12 +27,12 @@ We will use https://github.com/mashpie/i18n-node for integrate with Phrase, just
 ```
 $ npm install
 $ node script.js en
-zavaCop.helloWorld
+phrase.hello
 ```
 
 # Zava COP hands-on
 
-![COP](/img/ss1.png)
+![COP](/phrase/img/ss1.png)
 
 ### 1. Update .phrase.yml
 
