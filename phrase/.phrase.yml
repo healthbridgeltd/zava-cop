@@ -1,0 +1,8 @@
+phrase:
+  # project_id: xxxxxxxxxxxxxxxxxxxx
+  # access_token: yyyyyyyyyyyyyyyyyyyy
+  pull:
+    targets:
+      - file: ./locales/<locale_name>.json
+        params:
+          file_format: simple_json
