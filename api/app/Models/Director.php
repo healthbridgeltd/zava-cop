@@ -4,7 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Film extends Model
+class Director extends Model
 {
     /**
      * The attributes that are mass assignable.
@@ -12,14 +12,10 @@ class Film extends Model
      * @var array
      */
     protected $fillable = [
-        'title',
-        'release_year',
-        'description',
-        'rating',
-        'director_id'
+        'name',
     ];
 
-    protected $table = 'film';
+    protected $table = 'director';
 
     public $timestamps = false;
 }

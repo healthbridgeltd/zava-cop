@@ -33,9 +33,9 @@ class AddressController extends Controller
                 'postcode' => 'required|string|regex:/[A-PR-UWYZa-pr-uwyz]{1,2}[0-9][0-9A-HJKPS-UWa-hjkps-uw]? ?[0-9][ABD-HJLNP-UW-Zabd-hjlnp-uw-z]{2}/i'
             ]);
 
-            return new Response('', 200);
+            return new Response('Address validated OK.', 200);
         } catch (ValidationException $e) {
-            return new Response($e->getMessage(), 400);
+            return new Response($e->getResponse()->getContent(), 400);
         }
     }
 }

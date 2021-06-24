@@ -21,7 +21,13 @@ $router->get('/hello', function () {
     print "Hello";
 });
 
-$router->get('/film/{id}', 'FilmController@get');
-$router->post('/film', 'FilmController@post');
+$router->get('/films', 'FilmController@get');
+$router->get('/films/{id}', 'FilmController@getOne');
+$router->post('/films', 'FilmController@post');
+$router->put('/films/{id}', 'FilmController@put');
+$router->delete('/films/{id}', 'FilmController@delete');
 
-$router->post('/address/validate', 'AddressController@validateAddress');
+$router->get('/directors/{id}/films', 'DirectorController@getFilms');
+
+$router->post('/rpc/validateAddress', 'AddressController@validateAddress');
+$router->post('/rpc/sayHello', 'SayHelloController@hello');
