@@ -1,3 +1,10 @@
+# Setting up this tutorial
+
+1. Clone this repository using `git clone git@github.com:healthbridgeltd/zava-cop` or do a `git pull` if you already have it.
+2. `cd` to the `api` folder.
+3. Run `docker-compose up -d` to build and start the docker containers for this project. (There are two: one for the API, the other for the MySQL database.)
+
+
 # Lumen PHP Framework
 
 [![Build Status](https://travis-ci.org/laravel/lumen-framework.svg)](https://travis-ci.org/laravel/lumen-framework)
