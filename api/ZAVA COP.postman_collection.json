@@ -114,7 +114,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"release_year\": 1975,\n    \"description\": \"Big shark eats people until it is blown up.\",\n    \"rating\": 98\n}",
+					"raw": "{\n    \"title\": \"Jaws\",\n    \"release_year\": 1975,\n    \"description\": \"Big shark eats people until it is blown up.\",\n    \"rating\": 98\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -122,7 +122,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://0.0.0.0:8000/film",
+					"raw": "http://0.0.0.0:8000/films",
 					"protocol": "http",
 					"host": [
 						"0",
@@ -132,7 +132,7 @@
 					],
 					"port": "8000",
 					"path": [
-						"film"
+						"films"
 					]
 				}
 			},
