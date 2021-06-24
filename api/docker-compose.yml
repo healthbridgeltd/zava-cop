@@ -1,0 +1,26 @@
+version: '3.7'
+services:
+  db:
+    build:
+      context: .
+      dockerfile: ./database/Dockerfile
+    image: movies-db
+    restart: always
+    ports:
+      - 3307:3306
+    environment:
+      - MYSQL_ROOT_PASSWORD=root1234
+      - MYSQL_DATABASE=movies
+      - MYSQL_ROOT_USER=root
+  app:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    volumes:
+      - .:/usr/src/app
+    image: movies-php
+    links:
+      - db
+    restart: always
+    ports:
+      - 8000:8000
